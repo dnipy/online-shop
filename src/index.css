@@ -17,8 +17,28 @@ h1,p {
 }
 .navbar {
   height: 80px;
-  background-color: #b91d47 !important;
+  background-color: #eeb61b !important;
 }
 .navbar a {
-  color: white !important;
+  color: black !important;
+  font-size: 20px !important;
+
+}
+
+.first-row {
+  height: 600px;
+}
+.first-row > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bor {
+  border-radius: 10px;
+  border: 1px rgba(179, 178, 178, 0.74) solid;
+}
+
+.al-cen {
+  text-align: center;
 }
