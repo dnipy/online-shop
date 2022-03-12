@@ -15,14 +15,15 @@ export default function Home() {
     return(
         <div>
             <Navbar/>
+            <h1 className="p-5">E-shop</h1>
+            <CaroselHome/>
             <div className="container mt-5">
-                <h1>E-shop</h1>
                 <FirstRow/>
                 <SecondRow/>
                 <hr />
                 <ThirdRow/>
             </div>
-            <CaroselHome/>
+            
             <CategoriesPart/>
 
         </div>
@@ -85,18 +86,18 @@ const ThirdRow = ()=>{
 
 const CaroselHome = ()=> {
     return(
-        <div id="carouselExampleIndicators" class="carousel slide mb-5 pl-5 pr-5" data-ride="carousel">
-            <Carousel swipeable={true} >
+        <div id="carouselExampleIndicators" class="carousel slide mt-5 mb-5 pl-5 pr-5" data-ride="carousel">
+            <Carousel  swipeable={true} >
                 <div>
-                    <img src={slider1} width='40%' height='50%' />
+                    <img style={{borderRadius : '15px'}} src={slider1} width='40%' height='50%' />
                     <p className="legend">item one</p>
                 </div>
                 <div>
-                    <img src={slider1} width='40%' height='50%'  />
+                    <img style={{borderRadius : '15px'}} src={slider1} width='40%' height='50%'  />
                     <p className="legend">item two</p>
                 </div>
                 <div>
-                    <img src={slider1} width='40%' height='50%' />
+                    <img style={{borderRadius : '15px'}} src={slider1} width='40%' height='50%' />
                     <p className="legend">item three</p>
                 </div>
             </Carousel>
@@ -110,11 +111,31 @@ const CategoriesPart = ()=> {
     return(
         <div className="container mt-5 ">
             <div className="al-cen bor">
-                <h3 >Categories</h3>
+                <h3  className="p-5 text-danger">Categories</h3>
                 <hr />
-                
+                <div className="p-5">
+                    <Cards/>
+                    <Cards/>
+                    <Cards/>
+                    <Cards/>
+                    <button type="button" class="btn btn-outline-danger btn-block mt-2">lets move</button>
+
+                </div>
+
             </div>
           
+        </div>
+    )
+}
+
+
+const Cards = ()=>{
+    return(
+        <div class="card bor m-5">
+            <img class="card-img-top" src={second} alt="Card image cap"/>
+            <div class="card-body">
+                <h3>one</h3>
+            </div>
         </div>
     )
 }
